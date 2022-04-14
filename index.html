@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>欢迎来到RzZ的主页</title>
 </head>
 <style>
+    body{
+        background-color: rgba(34, 188, 244, 0.416);
+       margin: 0
+       
+    }
 .head{
     background-color: aqua;
     /* background-image: url(./074_64495434.jpg); */
@@ -19,9 +23,58 @@
 h1{
     text-align: center;
 }
+.left{
+    
+    background-image: url(./image/cat.png);
+    background-position: 350px 0;
+    width: 300px;
+    height: 1100px;
+    float: left;
+    background-attachment: fixed;
+}
+.right{
+    text-align: right;
+    background-image: url(./image/cat.png);
+    background-position: 300px 0;
+    width: 217px;
+    height: 1100px;
+    float: right;
+    background-attachment: fixed;
+}
+.middle{
+    background-image: url(./image/sky.png);
+    
+    width: 1000px;
+    height: 1200px;
+}
+.left,.right,.middle{
+    display: inline-block;
+}
+.ele{
+    width: 400px;
+    height: 400px;
+    /* background-color:white; */
+    /* opacity: 60%; */
+}
+span{
+    font-weight: 700;
+    font-style: italic;
+    color: rgb(8, 0, 255);
+}
 </style>
 <body>
     <div class="head">欢迎来到RzZ的主页</div>
-    <h1>nmsl</h1>
+    <h1>现在公开可能な情报 な</h1>
+    <div class="left">   左 </div>
+    <div class="right"> 右 </div>
+    <div class="middle">
+      <div class="ele">
+          <img src="./image/头像.png" alt="头像" width="100">
+        <span>用户名：RzZ123</span>
+          
+      </div>
+      <div class="ele"></div>
+      <div class="ele"></div>
+    </div>
 </body>
 </html>
