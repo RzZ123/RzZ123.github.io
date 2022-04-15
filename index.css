@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.clearfix::before,.clearfix::after{
+    content: '';
+    display: table;
+}
+.clearfix::after{
+    clear: both;
+}
+body{
+    background-color: rgba(23, 171, 216, 0.471);
+    /* background-color: #fff; */
+}
+.header{
+    /* position: fixed; */
+    width: auto;
+    height: 64px;
+    background-color: #fff;
+    /* box-shadow: 0 2px 4px #00000014; */
+    box-shadow: 0 2px 4px #0000007b;
+    /* border-bottom: 2px solid rgb(147, 140, 140); */
+    padding-left: 24px;
+    margin-bottom: 4px;
+    font: italic 700 30px/2.2 楷体；
+    
+}
+.header img{
+    float: left;
+    
+    width: 64px;
+    height: 64px;
+}
+.wrapper{
+    width: 1000px;
+    height: 1200px;
+    margin: 0 auto;
+    background-color: rgba(23, 131, 131, 0.527);
+}
+.left{
+    float: left;
+    width: 250px;
+    height: 1200px;
+    background-color: antiquewhite;
+    margin-left: 4px;
+    background-image: url(./image/分栏.jpg);
+    background-position: 0 0;
+    /* background-attachment: fixed; */
+}
+.right{
+    float: right;
+    width: 250px;
+    height: 1200px;
+    background-color: antiquewhite;
+    margin-right: 4px;
+    background-image: url(./image/分栏.jpg);
+    background-position: -580px 0;
+    /* background-attachment: fixed; */
+}
