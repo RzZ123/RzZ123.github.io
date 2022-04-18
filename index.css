@@ -75,7 +75,7 @@ body{
     transform: translate(-50%,-50%);
     background-color: #ffffff;
     background-image: url(./image/行走的猫.png);
-    animation: move  1s steps(2)  infinite;
+    animation: move  0.8s steps(2)  infinite;
 
 }
 .left{
