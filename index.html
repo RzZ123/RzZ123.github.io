@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,41 @@
     <title>Rzz的主页</title>
     <link rel="stylesheet" href="index.css">
 </head>
+<script>
+    let firstTime = 0
+    let doubleEvent = {}
+    document.addEventListener('keyup', (e) => {
+        let currentTime = Date.now()
+        if (firstTime === 0) {
+            console.log(e.key);
+            firstTime = currentTime
+            doubleEvent[e.key] = true
+        } else if (currentTime - firstTime > 1200) { //超过300ms
+            firstTime = 0
+            doubleEvent = {}
+            console.log('reset');
+        } else {
+            console.log(e.key);
+            firstTime = currentTime
+            doubleEvent[e.key] = true
+        }
+        if (doubleEvent.w && doubleEvent.r && doubleEvent.h) {
+            alert('恭喜你发现了新世界')
+            window.location.href = "http://baidu.com";
+            console.log('b+c');
+            doubleEvent = {}
+            firstTime = 0
+        }
+    })
+</script>
+
 <body>
     <div class="header">
         <img src="./image/头像.png" alt="头像" title="Rzz经典头像">
         <!-- &nbsp; -->
         欢迎来到RzZ的主页
         <h1>
-            <a href="https://github.com/RzZ123" target="blank" >
+            <a href="https://github.com/RzZ123" target="blank">
             我的
             <span> GitHub</span>
             主页
@@ -25,9 +54,23 @@
     <div class="wrapper">
         <!-- 动态图 -->
         <div class="cat">
-          12
+            12
         </div>
+
+
+        <ul>
+            <li class="card">
+                <div class="content">
+                    <h2>123</h2>
+                </div>
+            </li>
+            </li>
+            <li class="card"></li>
+            <li class="card"></li>
+            <li class="card"></li>
+        </ul>
     </div>
-   
+
 </body>
+
 </html>

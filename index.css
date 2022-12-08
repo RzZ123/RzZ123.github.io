@@ -1,100 +1,156 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-li{
-    list-style: none;
-}
-a{
-    text-decoration: none;
-}
-.clearfix::before,.clearfix::after{
-    content: '';
-    display: table;
-}
-.clearfix::after{
-    clear: both;
-}
-body{
-    /* background-color: rgba(23, 171, 216, 0.471); */
-    /* background-color: #fff; */
-    background-color:#bfedfe;
-}
-.header{
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    /* background-color: #bbbdf3; */
-    /* background-color: rgb(248,238,195); */
-    /* box-shadow: 0 2px 4px #00000014; */
-    box-shadow: 0 2px 4px #0000007b;
-    /* border-bottom: 2px solid rgb(147, 140, 140); */
-    padding-left: 48px;padding-right: 32px;
-    margin-bottom: 8px;
-    font: italic 700 30px/2.2 楷体；
-    
-}
-.header img{
-    /* float: left; */
-    vertical-align:top;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-}
-.header h1{
-    float: right;
-    height: 60px;
-    margin-top: 16px;
-    font:italic 700 28px 楷体;
-    
-}
-.wrapper{
-    /* position: relative; */
-    width: 1000px;
-    height: 1200px;
-    margin: 0 auto;
-    background-color: #c2f7ff;  
-    /* background-color: #cdf1fd; */
-    /* background-color: #c8fefa; */
-}
-@keyframes move{
-   0%{
-    background-position: 0;
-   }
-   100%{
-    background-position: -400px;
-   }
-}
-.wrapper .cat{
-    width: 200px;
-    height: 160px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: #ffffff;
-    background-image: url(./image/行走的猫.png);
-    animation: move  0.8s steps(2)  infinite;
-
-}
-.left{
-    float: left;
-    width: 250px;
-    height: 1200px;
-    background-color: antiquewhite;
-    margin-left: 4px;
-    background-image: url(./image/分栏.jpg);
-    background-position: 0 0;
-    /* background-attachment: fixed; */
-}
-.right{
-    float: right;
-    width: 250px;
-    height: 1200px;
-    background-color: antiquewhite;
-    margin-right: 4px;
-    background-image: url(./image/分栏.jpg);
-    background-position: -580px 0;
-    /* background-attachment: fixed; */
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: table;
+        }
+        
+        .clearfix::after {
+            clear: both;
+        }
+        
+        body {
+            /* background-color: rgba(23, 171, 216, 0.471); */
+            /* background-color: #fff; */
+            background-color: #bfedfe;
+        }
+        
+        .header {
+            /* position: fixed; */
+            width: 100%;
+            height: 70px;
+            background-color: #bbbdf3;
+            /* background-color: rgb(248,238,195); */
+            /* box-shadow: 0 2px 4px #00000014; */
+            box-shadow: 0 2px 4px #0000007b;
+            /* border-bottom: 2px solid rgb(147, 140, 140); */
+            padding-left: 48px;
+            padding-right: 32px;
+            margin-bottom: 8px;
+            font: italic 700 30px/2.2 楷体；
+        }
+        
+        .header img {
+            /* float: left; */
+            vertical-align: top;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+        }
+        
+        .header h1 {
+            float: right;
+            height: 60px;
+            margin-top: 16px;
+            font: italic 700 28px 楷体;
+        }
+        
+        .wrapper {
+            /* position: relative; */
+            width: 1000px;
+            height: 1200px;
+            margin: 0 auto;
+            background-color: #c2f7ff;
+            /* background-color: #cdf1fd; */
+            /* background-color: #c8fefa; */
+        }
+        
+        .wrapper ul .card {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            /* background-color: #f3f3f3; */
+            margin-bottom: 8px;
+            /* background-image: url(./image/steam.png); */
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .wrapper ul .card::before {
+            content: '';
+            width: 110%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* background-image: url(./image/steam.png); */
+            background-size: 200%;
+            background-position: -153px -23px;
+        }
+        
+        .wrapper ul .card:nth-child(1)::before {
+            background-image: url(./image/steam.png);
+        }
+        
+        .wrapper ul .card::after {
+            content: "";
+            display: block;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 55%, rgba(0, 0, 0, 1) 100%);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .card .content {
+            position: absolute;
+            color: #ffffff;
+            z-index: 1;
+        }
+        
+        @keyframes move {
+            0% {
+                background-position: 0;
+            }
+            100% {
+                background-position: -400px;
+            }
+        }
+        
+        .wrapper .cat {
+            width: 200px;
+            height: 160px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            background-image: url(./image/行走的猫.png);
+            animation: move 0.8s steps(2) infinite;
+        }
+        
+        .left {
+            float: left;
+            width: 250px;
+            height: 1200px;
+            background-color: antiquewhite;
+            margin-left: 4px;
+            background-image: url(./image/分栏.jpg);
+            background-position: 0 0;
+            /* background-attachment: fixed; */
+        }
+        
+        .right {
+            float: right;
+            width: 250px;
+            height: 1200px;
+            background-color: antiquewhite;
+            margin-right: 4px;
+            background-image: url(./image/分栏.jpg);
+            background-position: -580px 0;
+            /* background-attachment: fixed; */
+        }
